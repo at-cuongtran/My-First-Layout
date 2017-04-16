@@ -1,0 +1,16 @@
+@import "partials/variables";
+
+@mixin bg-img($id, $img) {
+	&:nth-child(#{$id}) { 
+		background: url($img);
+		background-repeat: no-repeat;
+	}
+}
+
+@mixin bg-gradient($id, $color1, $color2) {
+	&:nth-child(#{$id}) {
+		background: $color1;
+		background: linear-gradient(to bottom, $color1, $color2);
+	}
+}
+
