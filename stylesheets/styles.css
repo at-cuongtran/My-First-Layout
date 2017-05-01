@@ -3,32 +3,68 @@ font-family: "myOpenSans";
 src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
 }*/
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #000000; }
+  a:hover {
+    color: #60BA62; }
 
-a,
-h2 {
-  font-family: 'Open Sans',sans-serif; }
+p {
+  color: #999999; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+h2,
+h3 {
+  font-family: 'Leckerli One', cursive;
+  font-weight: 300; }
 
 p,
-h2 {
+h2,
+h3,
+h4,
+body {
   margin: 0; }
 
 h2 {
-  font-size: 25px; }
+  font-size: 30px;
+  line-height: 33px;
+  margin-bottom: 10px; }
+
+h3 {
+  font-size: 22px;
+  line-height: 24px; }
+
+h4 {
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 500; }
+
+hr {
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px; }
+
+input,
+button {
+  font-family: inherit;
+  font-weight: 500; }
+
+input[type="text"] {
+  color: #999999; }
+
+button {
+  cursor: pointer; }
 
 .body {
-  background-image: url(../images/bg-top.jpg);
-  background-size: 1500px 1234px;
-  background-repeat: no-repeat;
-  background-position: center top;
-  font-family: Arial,Helvetica,sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  line-height: 23px;
-  color: #787878; }
+  line-height: 26px;
+  font-weight: 500; }
 
 .container {
-  z-index: 2;
-  width: 1170px;
+  width: 1138px;
   margin: 0 auto; }
 
 .row::after {
@@ -38,7 +74,7 @@ h2 {
 
 [class*="col-"] {
   float: left;
-  margin: 0 15px; }
+  margin: 0 1.3%; }
 
 [class*="col-"]:first-child {
   margin-left: 0px; }
@@ -46,14 +82,41 @@ h2 {
 [class*="col-"]:last-child {
   margin-right: 0px; }
 
+.col-1 {
+  width: 5.95%; }
+
 .col-2 {
-  width: 160px; }
+  width: 14.5%; }
 
 .col-3 {
-  width: 270px; }
+  width: 23.05%; }
+
+.col-4 {
+  width: 31.6%; }
+
+.col-5 {
+  width: 40.15%; }
 
 .col-6 {
-  width: 570px; }
+  width: 48.7%; }
+
+.col-7 {
+  width: 57.25%; }
+
+.col-8 {
+  width: 65.8%; }
+
+.col-9 {
+  width: 74.35%; }
+
+.col-10 {
+  width: 82.9%; }
+
+.col-11 {
+  width: 91.45%; }
+
+.col-12 {
+  width: 100%; }
 
 /************************* Layout Style ***************************/
 /******************************************************************/
@@ -91,7 +154,7 @@ h2 {
         display: block;
         padding: 22px 20px;
         text-decoration: none;
-        color: #ffffff;
+        color: #FFFFFF;
         text-align: center; }
 
 .nav ul li:first-child {
@@ -125,7 +188,7 @@ h2 {
   padding: 150px 0px 110px 86px; }
 
 .slider-title {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 600; }
 
 .slider-content {
@@ -152,8 +215,8 @@ h2 {
   font-size: 20px;
   font-weight: 300; }
   .carousel-title:nth-child(1) {
-    background: #ffffff;
-    background: linear-gradient(to bottom, #ffffff, #dedede); }
+    background: #FFFFFF;
+    background: linear-gradient(to bottom, #FFFFFF, #dedede); }
 
 .carousel-content {
   box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3);
@@ -178,7 +241,7 @@ h2 {
 .carousel-image {
   float: left;
   margin-right: 18px;
-  border: 6px solid #ffffff;
+  border: 6px solid #FFFFFF;
   width: 199px;
   height: 132px; }
   .carousel-image:hover {
@@ -222,7 +285,7 @@ h2 {
   margin-bottom: 64px; }
 
 .middle-col {
-  color: #ffffff; }
+  color: #FFFFFF; }
   .middle-col:nth-child(1) {
     background: #7ed7dd;
     background: linear-gradient(to bottom, #7ed7dd, #5db6bc); }
@@ -271,7 +334,7 @@ img[alt="home"] {
       color: #5ecdd4; }
 
 .footer-heading {
-  color: #ffffff;
+  color: #FFFFFF;
   margin-bottom: 30px;
   font-weight: 300; }
 
@@ -339,9 +402,9 @@ img[alt="home"] {
 
 [class*="btn-white-"] {
   height: 36px;
-  background-color: #ffffff; }
+  background-color: #FFFFFF; }
   [class*="btn-white-"]:hover {
-    color: #ffffff;
+    color: #FFFFFF;
     background-color: #292f36; }
 
 .btn-white-1 {
@@ -359,10 +422,10 @@ img[alt="home"] {
 .btn-black {
   box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3);
   height: 38px;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #292f36; }
   .btn-black:hover {
-    color: #ffffff;
+    color: #FFFFFF;
     background-color: #5ecdd4; }
 
 /************************* Logo and Social Style ***************************/

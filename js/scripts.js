@@ -38,7 +38,7 @@ var container = document.getElementsByClassName('container');
 var selectElement = document.getElementsByClassName('select-list');
 var table = newElement('table', {'class':'table'});
 
-// delete curtain product in products
+// delete certain product in products
 function deleteProduct(elt) {
 	var parentElement = elt.parentNode.parentNode;
 	products.splice(parentElement.cells[0].innerHTML, 1);
