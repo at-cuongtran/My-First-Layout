@@ -3,7 +3,22 @@
 @import "partials/variables";
 
 
+.dropdown-btn {
+	color: #ffffff;
+	font-weight: 400;
+	span {
+		color: $green;
+		font-weight: 700;
+	}
 
+	&:hover {
+		color: #ffffff;
+	}
+}
+
+.show {
+	display: block !important;
+}
 
 .dropdown-content {
 	display: none;
@@ -15,7 +30,17 @@
 	background-color: #ffffff;
 }
 
-.topbar .dropdown-content {
+
+.depot .dropdown-content {
+	right: 0;
+	padding: 20px 20px 0;
+	top: 36px;
+	width: 400px;
+	font-size: 13px;
+	line-height: 20	px;
+}
+
+.topbar-left .dropdown-content {
 	top: 46px;
 	width: 140px;
 	a {
@@ -35,22 +60,6 @@
 	display: block;
 }
 
-.dropdown-btn {
-	color: #ffffff;
-	font-weight: 400;
-	span {
-		color: $green;
-		font-weight: 700;
-	}
-
-	&:hover {
-		color: #ffffff;
-	}
-}
-
-.show {
-	display: block;
-}
 
 /************************* Layout Style ***************************/
 /******************************************************************/
@@ -126,18 +135,34 @@
 }
 
 .depot {
+	position: relative;
 	margin-top: 10px;
 	float: right;
 	color: $green;
 	font-size: 16px;
-	a {
+	.dropdown-btn {
 		font-size: 12px;
-		line-height: 21px;
+		line-height: 22px;
+		font-weight: 500;
 		color: #ffffff;
+		i:first-child {
+			font-size: 16px;
+			color: $green;
+			margin-right: 5px;
+		}
+		i:last-child {
+			color: #ffffff;
+		}
 	}
 }
 
+.cart-view {
+	margin-bottom: 20px;
+}
 
+.cart-detail {
+	color: $content-color;
+}
 
 .nav {
 	float: right;
@@ -230,7 +255,7 @@
 .product-img {
 	margin-bottom: 5px;
 	background: {
-		image: url(../images/product13-450x450.jpg);
+		image: url(../images/product1.jpg);
 		size: cover;
 	}
 	height: 262px;
@@ -319,10 +344,10 @@
 	color: $content-color;
 }
 
-.refine-search-btn {
+.green-btn {
 	border: 0;
 	padding: 1px 2px;
-	margin: 0 0 20px 20px;
+	margin: 10px 0 20px 20px;
 	width: 110px;
 	height: 32px;
 	background-color: $green;
@@ -343,8 +368,9 @@
 .product-square-img {
 	float: left;
 	margin-right: 14px;
+	margin-bottom: 10px;
 	background: {
-		image: url(../images/product13-450x450.jpg);
+		image: url(../images/product1.jpg);
 		size: cover;
 	}
 	width: 80px;
@@ -511,4 +537,32 @@ button[value="SUBSCRIBE"] {
    font-size: 15px;
    font-weight: 700;
    color: #FEBD49;
+}
+
+
+
+/************************* Table Style ***************************/
+/******************************************************************/
+
+table, td, th {
+	border: 1px solid #ddd;
+}
+
+.table {
+	border-collapse: collapse;
+	max-width: 100%;
+	text-align: left;
+	tr:hover {
+		background-color: #f5f5f5
+	}
+
+	
+	tr th {
+		padding: 15px;
+
+	}
+
+	tr td {
+		padding: 15px;
+	}
 }

@@ -118,30 +118,6 @@ button {
 .col-12 {
   width: 100%; }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  padding: 20px;
-  border: 1px solid #E1E1E1;
-  border-top: 2px solid #60BA62;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.18);
-  background-color: #ffffff; }
-
-.topbar .dropdown-content {
-  top: 46px;
-  width: 140px; }
-  .topbar .dropdown-content a {
-    color: #999999;
-    font-size: 14px;
-    font-weight: 14px;
-    line-height: 25px; }
-
-.nav-dropdown {
-  left: 0; }
-
-.dropdown-hover:hover .dropdown-content {
-  display: block; }
-
 .dropdown-btn {
   color: #ffffff;
   font-weight: 400; }
@@ -152,6 +128,38 @@ button {
     color: #ffffff; }
 
 .show {
+  display: block !important; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 20px;
+  border: 1px solid #E1E1E1;
+  border-top: 2px solid #60BA62;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.18);
+  background-color: #ffffff; }
+
+.depot .dropdown-content {
+  right: 0;
+  padding: 20px 20px 0;
+  top: 36px;
+  width: 400px;
+  font-size: 13px;
+  line-height: 20	px; }
+
+.topbar-left .dropdown-content {
+  top: 46px;
+  width: 140px; }
+  .topbar-left .dropdown-content a {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 14px;
+    line-height: 25px; }
+
+.nav-dropdown {
+  left: 0; }
+
+.dropdown-hover:hover .dropdown-content {
   display: block; }
 
 /************************* Layout Style ***************************/
@@ -214,14 +222,28 @@ button {
     height: 46px; }
 
 .depot {
+  position: relative;
   margin-top: 10px;
   float: right;
   color: #60BA62;
   font-size: 16px; }
-  .depot a {
+  .depot .dropdown-btn {
     font-size: 12px;
-    line-height: 21px;
+    line-height: 22px;
+    font-weight: 500;
     color: #ffffff; }
+    .depot .dropdown-btn i:first-child {
+      font-size: 16px;
+      color: #60BA62;
+      margin-right: 5px; }
+    .depot .dropdown-btn i:last-child {
+      color: #ffffff; }
+
+.cart-view {
+  margin-bottom: 20px; }
+
+.cart-detail {
+  color: #999999; }
 
 .nav {
   float: right; }
@@ -287,7 +309,7 @@ button {
 
 .product-img {
   margin-bottom: 5px;
-  background-image: url(../images/product13-450x450.jpg);
+  background-image: url(../images/product1.jpg);
   background-size: cover;
   height: 262px;
   width: 100%; }
@@ -354,10 +376,10 @@ button {
   .search-item:last-child {
     margin-bottom: 24px; }
 
-.refine-search-btn {
+.green-btn {
   border: 0;
   padding: 1px 2px;
-  margin: 0 0 20px 20px;
+  margin: 10px 0 20px 20px;
   width: 110px;
   height: 32px;
   background-color: #60BA62;
@@ -375,7 +397,8 @@ button {
 .product-square-img {
   float: left;
   margin-right: 14px;
-  background-image: url(../images/product13-450x450.jpg);
+  margin-bottom: 10px;
+  background-image: url(../images/product1.jpg);
   background-size: cover;
   width: 80px;
   height: 80px; }
@@ -492,5 +515,21 @@ button[value="SUBSCRIBE"] {
   font-size: 15px;
   font-weight: 700;
   color: #FEBD49; }
+
+/************************* Table Style ***************************/
+/******************************************************************/
+table, td, th {
+  border: 1px solid #ddd; }
+
+.table {
+  border-collapse: collapse;
+  max-width: 100%;
+  text-align: left; }
+  .table tr:hover {
+    background-color: #f5f5f5; }
+  .table tr th {
+    padding: 15px; }
+  .table tr td {
+    padding: 15px; }
 
 /*# sourceMappingURL=styles2.css.map */

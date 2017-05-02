@@ -7,6 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Leckerli+One|Poppins:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body class="body">
 	<header class="header">
@@ -35,8 +41,25 @@
 						</form>
 					</div>
 					<div class="depot">
-						<i class="fa fa-shopping-cart"></i>
-						<a href="" class="dropdown"> 0 item(s) - $0.00 </a>
+						<div class="dropdown">
+							<a href="javascript:;" class="dropdown-btn cart-dropdown-btn" onclick="dropdownToggle(this)"></a>
+							<div class="dropdown-content cart">
+								<!-- <div>
+
+									<div class="row">
+										<div class="col-3"><img src="images/product1.jpg" alt="" class="product-square-img"></div>
+										<div class="col-9 cart-detail">Asus - 15.6 Laptop<br>$20.00</div>
+									</div>
+									<div class="row">
+										<div class="col-3"><img src="images/product1.jpg" alt="" class="product-square-img"></div>
+										<div class="col-9 cart-detail">Asus - 15.6 Laptop<br>$20.00</div>
+									</div>
+									<button class="green-btn" onclick="viewCart()">VIEW CART</button>
+									<button class="green-btn" onclick="clearCart()">EMPTY CART</button>
+
+								</div> -->
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -98,7 +121,24 @@
 		</div>
 		<div class="header-img"><i class="fa fa-home"></i><span>></span><a href="">Shopping Cart</a></div>
 	</header>
-<section>
-	<h2>Shopping Cart</h2>
-	
-</section>
+
+<main>
+	<div class="container">
+		<div class="row">
+			<section>
+
+				<h2>Shopping Cart</h2>
+				
+				<div class="cart-table">
+					
+				</div>
+
+			</section>
+		</div>
+	</div>
+</main>
+
+	<script type="text/javascript" src="js/layout2-script.js"></script>
+	<script type="text/javascript" src="js/cart-page-script.js"></script>
+</body>
+</html>

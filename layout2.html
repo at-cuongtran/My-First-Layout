@@ -15,8 +15,8 @@
 			<div class="container">
 				<ul class="topbar-left">
 					<li class="dropdown">
-						<a class="dropdown-btn" onclick="dropdownToggle(this)">Language: <span>Eng <i class="fa fa-caret-down"></i></span></a>
-						<div class="dropdown-content lang">
+						<a class="dropdown-btn" href="javascript:;" onclick="dropdownToggle(this)">Language: <span>Eng <i class="fa fa-caret-down"></i></span></a>
+						<div class="dropdown-content">
 							<img src="images/en-gb.png" alt="">
 							<a href="">English</a><br><a href="">Arabic</a>
 						</div>
@@ -35,8 +35,25 @@
 						</form>
 					</div>
 					<div class="depot">
-						<i class="fa fa-shopping-cart"></i>
-						<a href="" class="dropdown"> 0 item(s) - $0.00 </a>
+						<div class="dropdown">
+							<a href="javascript:;" class="dropdown-btn cart-dropdown-btn" onclick="dropdownToggle(this)"></a>
+							<div class="dropdown-content cart">
+								<!-- <div>
+
+									<div class="row">
+										<div class="col-3"><img src="images/product1.jpg" alt="" class="product-square-img"></div>
+										<div class="col-9 cart-detail">Asus - 15.6 Laptop<br>$20.00</div>
+									</div>
+									<div class="row">
+										<div class="col-3"><img src="images/product1.jpg" alt="" class="product-square-img"></div>
+										<div class="col-9 cart-detail">Asus - 15.6 Laptop<br>$20.00</div>
+									</div>
+									<button class="green-btn" onclick="viewCart()">VIEW CART</button>
+									<button class="green-btn" onclick="clearCart()">EMPTY CART</button>
+
+								</div> -->
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -65,16 +82,16 @@
 												</div>
 												<div class="row special-item">
 													<div class="product-square-img"></div>
-													<a href="">Asus - 15.6 Laptop</a>
-													<span class="price">$20.00</span>
+													<a href="">Bar - Electra</a>
+													<span class="price">$110.00</span>
 													<span class="old-price">$122.00</span>
 													<div class="rating"></div>
 												</div>
 												<div class="row special-item">
 													<div class="product-square-img"></div>
-													<a href="">Asus - 15.6 Laptop</a>
-													<span class="price">$20.00</span>
-													<span class="old-price">$122.00</span>
+													<a href="">Chairs pink for home</a>
+													<span class="price">$26.00</span>
+													<span class="old-price">$602.00</span>
 													<div class="rating"></div>
 												</div>
 											</div>
@@ -151,32 +168,35 @@
 							<hr>
 
 							<div class="row">
-								<div class="col-4 product">
-									<div class="product-img"></div>
+								<div class="col-4 product" value="product1">
+									<img src="images/product1.jpg" alt="" class="product-img">
 									<a href="">Asus - 15.6 Laptop</a>
-									<span class="price">$20.00</span><span class="old-price">$122.00</span>
+									<span class="price">$20.00</span> <span class="old-price">$122.00</span>
 									<div class="rating">
 										<span></span><span></span><span></span><span></span><span></span>
 									</div>
-									<button class="add-to-cart"><i class="fa fa-shopping-cart fa-1g"></i> ADD TO CART</button>
+									<button class="add-to-cart" onclick="addToCart(this)"><i class="fa fa-shopping-cart fa-1g"></i> ADD TO CART</button>
 								</div>
-								<div class="col-4 product"><div class="product-img"></div>
-									<a href="">Asus - 15.6 Laptop</a>
-									<span class="price">$20.00</span><span class="old-price">$122.00</span>
+								<div class="col-4 product"  value="product2">
+									<img src="images/product2.jpg" alt="" class="product-img">
+									<a href="">Bar - Electra</a>
+									<span class="price">$110.00</span> <span class="old-price">$122.00</span>
 									<div class="rating">
 										<span></span><span></span><span></span><span></span><span></span>
 									</div>
-									<button class="add-to-cart"><i class="fa fa-shopping-cart fa-1g"></i> ADD TO CART</button>
+									<button class="add-to-cart" onclick="addToCart(this)"><i class="fa fa-shopping-cart fa-1g"></i> ADD TO CART</button>
 								</div>
-								<div class="col-4 product"><div class="product-img"></div>
-									<a href="">Asus - 15.6 Laptop</a>
-										<span class="price">$20.00</span><span class="old-price">$122.00</span>
+								<div class="col-4 product" value="product3">
+									<img src="images/product3.jpg" alt="" class="product-img">
+									<a href="">Chairs pink for home</a>
+										<span class="price">$60.00</span> <span class="old-price">$402.00</span>
 									<div class="rating">
 										<span></span><span></span><span></span><span></span><span></span>
 									</div>
-									<button class="add-to-cart"><i class="fa fa-shopping-cart fa-1g"></i> ADD TO CART</button>
+									<button class="add-to-cart" onclick="addToCart(this)"><i class="fa fa-shopping-cart fa-1g"></i> ADD TO CART</button>
 								</div>
 							</div>
+
 							<div class="row">
 								<div class="col-4 product"><div class="product-img"></div>
 									<a href="">Asus - 15.6 Laptop</a>
@@ -273,7 +293,7 @@
 							<label class="search-item"><input type="checkbox" class="checkbox" /> XL</label>
 							<label class="search-item"><input type="checkbox" class="checkbox" /> XXL</label>
 						</div>
-						<button class="refine-search-btn">REFINE SEARCH</button>
+						<button class="green-btn">REFINE SEARCH</button>
 					</div>
 					<div class="sidebar">
 						<div class="sidebar-title"><h3>Specials</h3></div>
@@ -396,6 +416,6 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="js/scripts2.js"></script>
+	<script type="text/javascript" src="js/layout2-script.js"></script>
 </body>
 </html>
