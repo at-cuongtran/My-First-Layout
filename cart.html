@@ -1,142 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="stylesheets/styles2.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Leckerli+One|Poppins:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles2.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Leckerli+One|Poppins:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
 </head>
 <body class="body">
-  <header class="header">
+	<header class="header">
 
-    <div class="topbar">
-      <div class="container">
-        <ul class="topbar-left">
-          <li class="dropdown">
-            <a class="dropdown-btn" onclick="dropdownToggle(this)">Language: <span>Eng <i class="fa fa-caret-down"></i></span></a>
-            <div class="dropdown-content lang">
-              <img src="images/en-gb.png" alt="">
-              <a href="">English</a><br><a href="">Arabic</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-btn">Currency: <span>US <i class="fa fa-caret-down"></i></span></a>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-btn">My Account <span><i class="fa fa-caret-down"></i></span></a>
-          </li>
-        </ul>
-        <div class="topbar-right">
-          <div class="search">
-            <form>
-              <input type="text" name="search" placeholder="Search..">
-            </form>
-          </div>
-          <div class="depot">
-            <div class="dropdown">
-              <a href="javascript:;" class="dropdown-btn cart-dropdown-btn" onclick="dropdownToggle(this)"></a>
-              <div class="dropdown-content cart">
-                <!-- <div>
+		<div class="topbar">
+			<div class="container">
+				<ul class="topbar-left">
+					<li class="dropdown">
+						<a class="dropdown-btn" onclick="dropdownToggle(this)">Language: <span>Eng <i class="fa fa-caret-down"></i></span></a>
+						<div class="dropdown-content lang">
+							<img src="images/en-gb.png" alt="">
+							<a href="">English</a><br><a href="">Arabic</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-btn">Currency: <span>US <i class="fa fa-caret-down"></i></span></a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-btn">My Account <span><i class="fa fa-caret-down"></i></span></a>
+					</li>
+				</ul>
+				<div class="topbar-right">
+					<div class="search">
+						<form>
+							<input type="text" name="search" placeholder="Search..">
+						</form>
+					</div>
+					<div class="depot">
+						<div class="dropdown">
+							<a href="javascript:;" class="dropdown-btn cart-dropdown-btn" onclick="dropdownToggle(this)"></a>
+							<div class="dropdown-content cart">
+								<!-- <div>
 
-                  <div class="row">
-                    <div class="col-3"><img src="images/product1.jpg" alt="" class="product-square-img"></div>
-                    <div class="col-9 cart-detail">Asus - 15.6 Laptop<br>$20.00</div>
-                  </div>
-                  <div class="row">
-                    <div class="col-3"><img src="images/product1.jpg" alt="" class="product-square-img"></div>
-                    <div class="col-9 cart-detail">Asus - 15.6 Laptop<br>$20.00</div>
-                  </div>
-                  <button class="green-btn" onclick="viewCart()">VIEW CART</button>
-                  <button class="green-btn" onclick="clearCart()">EMPTY CART</button>
+									<div class="row">
+										<div class="col-3"><img src="images/product1.jpg" alt="" class="product-square-img"></div>
+										<div class="col-9 cart-detail">Asus - 15.6 Laptop<br>$20.00</div>
+									</div>
+									<div class="row">
+										<div class="col-3"><img src="images/product1.jpg" alt="" class="product-square-img"></div>
+										<div class="col-9 cart-detail">Asus - 15.6 Laptop<br>$20.00</div>
+									</div>
+									<button class="green-btn" onclick="viewCart()">VIEW CART</button>
+									<button class="green-btn" onclick="clearCart()">EMPTY CART</button>
 
-                </div> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>  
-    
-    <div class="container">
-      <div class="navbar">
-        <div class="navbar-img"></div>
-        <nav class="nav">
-          <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="">SHOP</a></li>
-            <li class="dropdown-hover">
-              <a href="" class="dropdown-btn">PAGES <i class="fa fa-caret-down"></i></a>
-              <div class="dropdown-content nav-dropdown pages">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="pages-title">
-                        <div class="row special-item">
-                          <div class="product-square-img"></div>
-                          <a href="">Asus - 15.6 Laptop</a>
-                          <span class="price">$20.00</span>
-                          <span class="old-price">$122.00</span>
-                          <div class="rating"></div>
-                        </div>
-                        <div class="row special-item">
-                          <div class="product-square-img"></div>
-                          <a href="">Asus - 15.6 Laptop</a>
-                          <span class="price">$20.00</span>
-                          <span class="old-price">$122.00</span>
-                          <div class="rating"></div>
-                        </div>
-                        <div class="row special-item">
-                          <div class="product-square-img"></div>
-                          <a href="">Asus - 15.6 Laptop</a>
-                          <span class="price">$20.00</span>
-                          <span class="old-price">$122.00</span>
-                          <div class="rating"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-2"></div>
-                    <div class="col-2"></div>
-                    <div class="col-4"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="" class="dropdown-hover">NEW ARRIVAL <i class="fa fa-caret-down"></i></a>
-            </li>
-            <li><a href="">BLOG</a></li>
-            <li><a href="">ON SALE</a></li>
-            <li><a href="">CONTACT US</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="header-img"><i class="fa fa-home"></i><span>></span><a href="">Shopping Cart</a></div>
-  </header>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+		
+		<div class="container">
+			<div class="navbar">
+				<div class="navbar-img"></div>
+				<nav class="nav">
+					<ul>
+						<li><a href="">HOME</a></li>
+						<li><a href="">SHOP</a></li>
+						<li class="dropdown-hover">
+							<a href="" class="dropdown-btn">PAGES <i class="fa fa-caret-down"></i></a>
+							<div class="dropdown-content nav-dropdown pages">
+								<div class="container">
+									<div class="row">
+										<div class="col-4">
+											<div class="pages-title">
+												<div class="row special-item">
+													<div class="product-square-img"></div>
+													<a href="">Asus - 15.6 Laptop</a>
+													<span class="price">$20.00</span>
+													<span class="old-price">$122.00</span>
+													<div class="rating"></div>
+												</div>
+												<div class="row special-item">
+													<div class="product-square-img"></div>
+													<a href="">Asus - 15.6 Laptop</a>
+													<span class="price">$20.00</span>
+													<span class="old-price">$122.00</span>
+													<div class="rating"></div>
+												</div>
+												<div class="row special-item">
+													<div class="product-square-img"></div>
+													<a href="">Asus - 15.6 Laptop</a>
+													<span class="price">$20.00</span>
+													<span class="old-price">$122.00</span>
+													<div class="rating"></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-2"></div>
+										<div class="col-2"></div>
+										<div class="col-4"></div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="" class="dropdown-hover">NEW ARRIVAL <i class="fa fa-caret-down"></i></a>
+						</li>
+						<li><a href="">BLOG</a></li>
+						<li><a href="">ON SALE</a></li>
+						<li><a href="">CONTACT US</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="header-img"><i class="fa fa-home"></i><span>></span><a href="">Shopping Cart</a></div>
+	</header>
 
 <main>
-  <div class="container">
-    <div class="row">
-      <section>
+	<div class="container">
+		<div class="row">
+			<section>
 
-        <h2>Shopping Cart</h2>
-        
-        <div class="cart-table">
-          
-        </div>
+				<h2>Shopping Cart</h2>
+				
+				<div class="cart-table">
+					
+				</div>
 
-      </section>
-    </div>
-  </div>
+			</section>
+		</div>
+	</div>
 </main>
 
-  <script type="text/javascript" src="js/layout2-jquery.js"></script>
+	<script type="text/javascript" src="js/layout2-jquery.js"></script>
 </body>
 </html>
