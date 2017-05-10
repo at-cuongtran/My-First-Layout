@@ -17,7 +17,7 @@ $(document).ready( () => {
     for (var i = 0, len = localStorage.length; i < len; ++i) {
       var cartProduct = getStorageItem(i);
       // If selected product exist in cart (local storage) then increase quantity
-      if(cartProduct.name == productName) {
+      if(cartProduct.name === productName) {
         productQuantity = cartProduct.quantity;
         productQuantity++;
       }
@@ -25,7 +25,7 @@ $(document).ready( () => {
     // add product to cart (local storage) and update cart status
     var product:any = {'value': productValue, 'name': productName, 'price': productPrice, 'quantity': productQuantity };
     setStorageItem(product.name, product);
-    console.log(`update local storage successfull ${productPrice}`);
+    console.log(`update local storage successfull`);
     updateCartStatus();
     window.scrollTo(0,0);
   });
@@ -56,7 +56,7 @@ var updateCartStatus = () => {
   var quantity:number = 0;
   var totalPrice:number = 0;
 
-  if(localStorage.length == 0) {
+  if(localStorage.length === 0) {
     CartDropdownContentString = '<p class="cart-view">Your cart is empty</p>';
   } else {
       // if cart is NOT empty, loop through all products in local storage and assign them to string
@@ -83,7 +83,7 @@ var updateCartStatus = () => {
         EMPTY CART
       </button>`;
   }
-  // render the to cart status
+  // render to cart status
   cartDropdownBtn.html(`
     <i class="fa fa-shopping-cart dropdown-btn"></i>
       ${quantity} item(s) - $${totalPrice} 
@@ -96,7 +96,7 @@ var updateCartStatus = () => {
 var createSelectListString = (productQuantity) => {
   var selectListString = '<select class="select-list" onChange="updateQuantity()">';
   for (var i = 0; i <= 10; i++) {
-    if (productQuantity == i) {
+    if (productQuantity === i) {
       selectListString += `<option value="${i}" selected="selected">${i}</option>`;
     } else {
       selectListString += `<option value="${i}">${i}</option>`;
@@ -168,4 +168,3 @@ var setStorageItem = (name: string, item: string) => {
   return localStorage.setItem(name, JSON.stringify(item));
 }
 
-var dropdownToggle = () => {}

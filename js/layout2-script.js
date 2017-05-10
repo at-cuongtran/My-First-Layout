@@ -59,18 +59,13 @@ function updateCartDropdownContent() {
 	if(localStorage.length == 0) {
 
 		// if cart is EMPTY update cart status
-		updateCartDropdownBtn();
 		CartDropdownContentString = '<p class="cart-view">Your cart is empty</p>';
 	} else {
 
 			// if cart is NOT empty, loop through all the product in local storage
-			var totalPrice = 0;
 			for (var i = 0, len = localStorage.length; i < len; ++i) {
-				totalPrice = 0;
 				CartDropdownContentString += '<div class="row">'
 				var product = JSON.parse(localStorage.getItem(localStorage.key(i)));
-
-				totalPrice += (product.quantity * Number(product.price.replace(/[^0-9\.]+/g,"")));
 				
 				CartDropdownContentString += '<div class="col-3"><img src="images/' + product.value + '.jpg" alt="" class="product-square-img"></div><div class="col-9 cart-detail">' + product.name + '<br>x ' + product.quantity + '<br>$' + Number(product.price.replace(/[^0-9\.]+/g,"")) + '</div>';
 				CartDropdownContentString += '</div>'

@@ -3,6 +3,7 @@ $(document).ready(function() {
 	updateCartDropdownContent();
 
 	$('.dropdown-btn').click(function () {
+		console.log(this);
 		$(this).next().toggleClass('show');
 	});
 
