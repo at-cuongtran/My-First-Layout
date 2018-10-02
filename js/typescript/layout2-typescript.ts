@@ -30,11 +30,11 @@ $(document).ready( () => {
     window.scrollTo(0,0);
   });
 
-  $('.view-cart').click( () => {
-    window.location.href = 'file:///home/cuong/site/mysite/cart.html';
+  $(document).on('click', '.view-cart', () => {
+    window.location.href = 'cart.html';
   });
 
-  $('.clear-cart').click( () => {
+  $(document).on('click', '.clear-cart', () => {
     localStorage.clear();
     updateCartStatus();
   });  
@@ -144,7 +144,7 @@ function updateQuantity() {
   var sum = 0;
   for (var i = 0, len = localStorage.length; i < len; ++i) {
     var product = getStorageItem(i);
-    var selectedValue = parseInt(selectElements[i].value);
+    var selectedValue = parseInt($(selectElements[i]).val().toString());
 
     product.quantity = selectedValue;
     var totalPrice = product.quantity * product.price;
